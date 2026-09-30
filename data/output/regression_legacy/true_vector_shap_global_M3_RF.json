@@ -1,0 +1,38 @@
+{
+  "model": "M3_RF",
+  "description": "M3 Random Forest tanpa klaster: LST + NDVI + NDBI",
+  "source": "regression_legacy run ulang",
+  "variables": [
+    {
+      "variable": "LST",
+      "mean": 0.49896998101732737,
+      "std": 0.4810322359186979,
+      "q25": 0.16468465117940428,
+      "median": 0.40162894604284216,
+      "q75": 0.673053506178013,
+      "contribution_pct": 77.29769315075927
+    },
+    {
+      "variable": "NDVI",
+      "mean": 0.02958717215551193,
+      "std": 0.023980163338020985,
+      "q25": 0.009616249889694117,
+      "median": 0.023826364206991947,
+      "q75": 0.04469569892357139,
+      "contribution_pct": 4.583482456825455
+    },
+    {
+      "variable": "NDBI",
+      "mean": 0.11696014582876234,
+      "std": 0.10383682807952536,
+      "q25": 0.041984957208332396,
+      "median": 0.08657644417246857,
+      "q75": 0.1401233094170724,
+      "contribution_pct": 18.118824392415256
+    }
+  ],
+  "n_samples": 128,
+  "baseline": 34.94264655026905,
+  "background": "mean X_test, mengikuti sel terakhir notebook arsip",
+  "local_accuracy_error": 2.1316282072803006e-14
+}

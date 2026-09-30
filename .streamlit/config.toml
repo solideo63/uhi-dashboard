@@ -1,0 +1,15 @@
+# Tema dikunci terang karena palet warna peta dan grafik divalidasi
+# keterbacaannya terhadap permukaan terang ini.
+[theme]
+base = "light"
+primaryColor = "#2a78d6"
+backgroundColor = "#f9f9f7"
+secondaryBackgroundColor = "#fcfcfb"
+textColor = "#0b0b0b"
+font = "sans serif"
+
+[server]
+maxUploadSize = 50
+
+[browser]
+gatherUsageStats = false

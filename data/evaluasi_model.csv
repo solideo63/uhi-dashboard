@@ -1,0 +1,9 @@
+model,konfigurasi,algoritma,n_fitur,split,train_r2,train_adj_r2,test_r2,test_adj_r2,test_rmse,test_mae,test_mape,cv_r2_mean,cv_r2_std
+M1,M1: Lag LST saja,RF,5,Semua Grid,0.9757,0.9754,0.7392,0.7285,0.6217,0.4963,0.0128,0.817,0.0305
+M1,M1: Lag LST saja,SVR,5,Semua Grid,0.8659,0.8646,0.7566,0.7466,0.6006,0.4663,0.012,0.817,0.0401
+M2,M2: Lag LST (per Cluster),RF,5,Per Cluster,0.9729,0.9726,0.7893,0.7807,0.5735,0.4344,0.0112,0.8028,0.0594
+M2,M2: Lag LST (per Cluster),SVR,5,Per Cluster,0.8929,0.8918,0.7664,0.7569,0.6039,0.4332,0.0112,0.7995,0.0528
+M3,M3: Lag LST + NDVI + NDBI,RF,17,Semua Grid,0.9801,0.9794,0.7921,0.76,0.555,0.4285,0.0111,0.8431,0.0282
+M3,M3: Lag LST + NDVI + NDBI,SVR,17,Semua Grid,0.9618,0.9604,0.825,0.7979,0.5093,0.3749,0.0097,0.8518,0.0312
+M4,M4: Lag LST + NDVI + NDBI (per Cluster),RF,17,Per Cluster,0.9765,0.9757,0.834,0.8083,0.5092,0.384,0.0099,0.8439,0.0389
+M4,M4: Lag LST + NDVI + NDBI (per Cluster),SVR,17,Per Cluster,0.9768,0.976,0.8014,0.7707,0.5569,0.3547,0.0092,0.8604,0.0286

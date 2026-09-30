@@ -1,0 +1,85 @@
+{
+  "beranda": {
+    "lebarLayar": 390,
+    "lebarGulirDokumen": 390,
+    "lebarGulirUtama": 390,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 6967,
+    "elemenMeluap": [
+      {
+        "el": "div.dvn-stack",
+        "kiri": 17,
+        "kanan": 678,
+        "lebar": 661,
+        "teks": ""
+      },
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 3,
+    "hurufTerkecil": [
+      {
+        "px": 1,
+        "contoh": "​"
+      },
+      {
+        "px": 11,
+        "contoh": "GRID PENGAMATAN"
+      },
+      {
+        "px": 11.5,
+        "contoh": "BERANDA"
+      },
+      {
+        "px": 12,
+        "contoh": "sel 1 × 1 km"
+      }
+    ],
+    "peta": [
+      {
+        "lebar": 358,
+        "tinggi": 520
+      }
+    ],
+    "grafik": [
+      {
+        "lebar": 358,
+        "tinggi": 452
+      },
+      {
+        "lebar": 358,
+        "tinggi": 452
+      }
+    ],
+    "tabel": [
+      {
+        "lebar": 358,
+        "tinggi": 220
+      },
+      {
+        "lebar": 358,
+        "tinggi": 255
+      }
+    ],
+    "kartu": {
+      "jumlah": 10,
+      "baris": 6,
+      "lebarMin": 173
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  }
+}

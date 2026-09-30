@@ -1,0 +1,5 @@
+no,kode,deskripsi,fitur
+1,Model 1 (M1),Model time series univariat berbasis LST,Lag LST (2009–2021)
+2,Model 2 (M2),Model berbasis clustering dan time series LST,Cluster (K-Means) + Lag LST (2009–2021)
+3,Model 3 (M3),Model multivariat berbasis variabel lingkungan dan time series,Lag LST + Lag NDVI + Lag NDBI (2009–2021)
+4,Model 4 (M4),Model multivariat dengan integrasi clustering dan variabel lingkungan,Cluster (K-Means) + Lag LST + Lag NDVI + Lag NDBI (2009–2021)

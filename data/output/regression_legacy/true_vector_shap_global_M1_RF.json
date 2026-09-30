@@ -1,0 +1,16 @@
+{
+  "model": "M1_RF",
+  "description": "Model 2 pada deskripsi Excel: RF tanpa klaster",
+  "source": "regression_legacy run ulang",
+  "variable": "LST",
+  "n_samples": 128,
+  "mean": 0.5965663078210415,
+  "std": 0.5246552678691879,
+  "q25": 0.22905194234455628,
+  "median": 0.520567864197897,
+  "q75": 0.8235634396182707,
+  "contribution_pct": 100.0,
+  "baseline": 34.881332401173125,
+  "background": "mean X_test, mengikuti sel terakhir notebook arsip",
+  "local_accuracy_error": 0.0
+}

@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-09-26T06:44:29.084215+00:00",
+  "input_files": {
+    "C:\\Users\\Solideo G. Bangun\\uhi-dashboard\\data\\NDVI_NDBI_Jakarta_v2\\NDVI_NDBI_Grid1km_Jakarta_Landsat_OLIref_v2.geojson": "a08e4b3e6ced2ef5ebadc2db5c341254ee36a3148da4559eb7aeb5b2e0ffc79f",
+    "C:\\Users\\Solideo G. Bangun\\uhi-dashboard\\data\\cluster_spatial_k4.geojson": "c66c63900b05512c0c3f166d629a52a2e28c8e47c6368ff36a9c78de5fa4fa3a",
+    "C:\\Users\\Solideo G. Bangun\\uhi-dashboard\\data\\LSTPuncakKemarau.geojson": "fd4dd2f8567b3ba5792679a8e1d21243479ea10e81a1f7477a5790ddabc47b09"
+  },
+  "index_years": [
+    2009,
+    2012,
+    2015,
+    2018,
+    2021,
+    2024
+  ],
+  "lst_lag_years": [
+    2009,
+    2012,
+    2015,
+    2018,
+    2021
+  ],
+  "target_year": 2024,
+  "includes_target_year_indices": true,
+  "n_complete_cases": 629,
+  "n_train": 503,
+  "n_test": 126,
+  "min_valid_fraction": 0.8,
+  "min_observations": 1,
+  "extraction_min_observations": [
+    1
+  ],
+  "processing_revisions": [
+    "obs_support_v3"
+  ],
+  "seed": 42,
+  "cv_folds": 5,
+  "best_by_training_cv": {
+    "RF": "M1_LagLST",
+    "SVR": "M1_LagLST"
+  },
+  "rf_params": {
+    "n_estimators": 300,
+    "max_features": "sqrt",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "svr_params": {
+    "kernel": "rbf",
+    "C": 10,
+    "gamma": "scale",
+    "epsilon": 0.1
+  },
+  "versions": {
+    "python": "3.10.15 | packaged by Anaconda, Inc. | (main, Oct  3 2024, 07:22:19) [MSC v.1929 64 bit (AMD64)]",
+    "sklearn": "1.5.2",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3"
+  },
+  "harmonization": "Roy2016_Table2_SR_RMA_ETM_to_OLI; local validation not performed",
+  "evaluation": "random spatial holdout, conditional on observed 2024 NDVI/NDBI",
+  "cluster_provenance": "external labels; target-year exclusion must be checked at source"
+}

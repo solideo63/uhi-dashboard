@@ -1,0 +1,14 @@
+{
+  "mode": "acuan_skripsi",
+  "source_type": "archived_research_tables",
+  "model_refitted": false,
+  "reproduction_verified": false,
+  "reference_document": "Skripsi Deo.docx",
+  "evaluation_sheet": "Sheet4",
+  "sources": {
+    "Hasil Evaluasi Cluster.xlsx": "7f370caa395a596b07a60bdf9336b368ba08f8e5537c95de34203e680e4c56c6",
+    "evaluasi_model.csv": "96feedadafee10be55599b968b984a525923986b8ca119de496259ed874c713a",
+    "tabel_vector_shap_summary.csv": "cfd0992251500d8a6e9dcd473751d00258f4c3261e122d6f38cc0f6c5aa3463b",
+    "true_vector_shap_cluster_M4_LagAll_byCluster.csv": "bf06ee46eee9073ebd1c3f2f0eaf61aa5afce665411ccbc9ee779851bf37ee83"
+  }
+}

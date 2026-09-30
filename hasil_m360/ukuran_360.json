@@ -1,0 +1,500 @@
+{
+  "beranda": {
+    "lebarLayar": 360,
+    "lebarGulirDokumen": 360,
+    "lebarGulirUtama": 360,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 7627,
+    "elemenMeluap": [
+      {
+        "el": "div.dvn-stack",
+        "kiri": 17,
+        "kanan": 678,
+        "lebar": 661,
+        "teks": ""
+      },
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 3,
+    "hurufTerkecil": [
+      {
+        "px": 1,
+        "contoh": "​"
+      },
+      {
+        "px": 11,
+        "contoh": "GRID PENGAMATAN"
+      },
+      {
+        "px": 11.5,
+        "contoh": "BERANDA"
+      },
+      {
+        "px": 12,
+        "contoh": "sel 1 × 1 km"
+      }
+    ],
+    "peta": [
+      {
+        "lebar": 328,
+        "tinggi": 520
+      }
+    ],
+    "grafik": [
+      {
+        "lebar": 328,
+        "tinggi": 452
+      },
+      {
+        "lebar": 328,
+        "tinggi": 452
+      }
+    ],
+    "tabel": [
+      {
+        "lebar": 328,
+        "tinggi": 220
+      },
+      {
+        "lebar": 328,
+        "tinggi": 255
+      }
+    ],
+    "kartu": {
+      "jumlah": 10,
+      "baris": 10,
+      "lebarMin": 328
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  },
+  "eksplorasi": {
+    "lebarLayar": 360,
+    "lebarGulirDokumen": 360,
+    "lebarGulirUtama": 360,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 2769,
+    "elemenMeluap": [
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 2,
+    "hurufTerkecil": [
+      {
+        "px": 11,
+        "contoh": "MINIMUM"
+      },
+      {
+        "px": 11.5,
+        "contoh": "SEBARAN SPASIAL"
+      },
+      {
+        "px": 12,
+        "contoh": "LST terendah"
+      },
+      {
+        "px": 12.5,
+        "contoh": "LST (°C)"
+      }
+    ],
+    "peta": [
+      {
+        "lebar": 328,
+        "tinggi": 520
+      }
+    ],
+    "grafik": [
+      {
+        "lebar": 328,
+        "tinggi": 452
+      }
+    ],
+    "tabel": [
+      {
+        "lebar": 294,
+        "tinggi": 320
+      }
+    ],
+    "kartu": {
+      "jumlah": 5,
+      "baris": 5,
+      "lebarMin": 328
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  },
+  "temporal": {
+    "lebarLayar": 360,
+    "lebarGulirDokumen": 360,
+    "lebarGulirUtama": 360,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 1516,
+    "elemenMeluap": [
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 2,
+    "hurufTerkecil": [
+      {
+        "px": 11,
+        "contoh": "RATA-RATA LST 2009"
+      },
+      {
+        "px": 11.5,
+        "contoh": "TREN ANTARPERIODE"
+      },
+      {
+        "px": 12,
+        "contoh": "titik awal pengamatan"
+      },
+      {
+        "px": 14,
+        "contoh": "Beranda"
+      }
+    ],
+    "peta": [],
+    "grafik": [
+      {
+        "lebar": 328,
+        "tinggi": 452
+      }
+    ],
+    "tabel": [],
+    "kartu": {
+      "jumlah": 4,
+      "baris": 4,
+      "lebarMin": 328
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  },
+  "clustering": {
+    "lebarLayar": 360,
+    "lebarGulirDokumen": 360,
+    "lebarGulirUtama": 360,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 4521,
+    "elemenMeluap": [
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 2,
+    "hurufTerkecil": [
+      {
+        "px": 11,
+        "contoh": "METODE"
+      },
+      {
+        "px": 11.5,
+        "contoh": "PENGELOMPOKAN POLA"
+      },
+      {
+        "px": 12,
+        "contoh": "k = 4"
+      },
+      {
+        "px": 14,
+        "contoh": "Beranda"
+      }
+    ],
+    "peta": [
+      {
+        "lebar": 0,
+        "tinggi": 0
+      }
+    ],
+    "grafik": [
+      {
+        "lebar": 328,
+        "tinggi": 452
+      },
+      {
+        "lebar": 328,
+        "tinggi": 452
+      }
+    ],
+    "tabel": [],
+    "kartu": {
+      "jumlah": 4,
+      "baris": 4,
+      "lebarMin": 328
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  },
+  "forecasting": {
+    "lebarLayar": 360,
+    "lebarGulirDokumen": 360,
+    "lebarGulirUtama": 360,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 2660,
+    "elemenMeluap": [
+      {
+        "el": "div.dvn-stack",
+        "kiri": 17,
+        "kanan": 961,
+        "lebar": 944,
+        "teks": ""
+      },
+      {
+        "el": "div.dvn-stack",
+        "kiri": 17,
+        "kanan": 1094,
+        "lebar": 1077,
+        "teks": ""
+      },
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 4,
+    "hurufTerkecil": [
+      {
+        "px": 11,
+        "contoh": "MODEL TERBAIK"
+      },
+      {
+        "px": 11.5,
+        "contoh": "REGRESI MACHINE LEARNING"
+      },
+      {
+        "px": 12,
+        "contoh": "RF"
+      },
+      {
+        "px": 14,
+        "contoh": "Beranda"
+      }
+    ],
+    "peta": [],
+    "grafik": [
+      {
+        "lebar": 328,
+        "tinggi": 452
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      }
+    ],
+    "tabel": [
+      {
+        "lebar": 328,
+        "tinggi": 177
+      },
+      {
+        "lebar": 328,
+        "tinggi": 317
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      }
+    ],
+    "kartu": {
+      "jumlah": 9,
+      "baris": 5,
+      "lebarMin": 0
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  },
+  "shap": {
+    "lebarLayar": 360,
+    "lebarGulirDokumen": 360,
+    "lebarGulirUtama": 360,
+    "luapanMendatar": 0,
+    "tinggiHalaman": 3572,
+    "elemenMeluap": [
+      {
+        "el": "g",
+        "kiri": 21,
+        "kanan": 381,
+        "lebar": 360,
+        "teks": ""
+      },
+      {
+        "el": "g",
+        "kiri": 21,
+        "kanan": 381,
+        "lebar": 360,
+        "teks": ""
+      },
+      {
+        "el": "text",
+        "kiri": 21,
+        "kanan": 381,
+        "lebar": 360,
+        "teks": ""
+      },
+      {
+        "el": "tspan",
+        "kiri": 21,
+        "kanan": 381,
+        "lebar": 360,
+        "teks": ""
+      },
+      {
+        "el": "tspan",
+        "kiri": 21,
+        "kanan": 381,
+        "lebar": 360,
+        "teks": ""
+      },
+      {
+        "el": "div.dvn-stack",
+        "kiri": 17,
+        "kanan": 436,
+        "lebar": 419,
+        "teks": ""
+      },
+      {
+        "el": "svg",
+        "kiri": -10000,
+        "kanan": -1000,
+        "lebar": 9000,
+        "teks": ""
+      },
+      {
+        "el": "path",
+        "kiri": -10000,
+        "kanan": -9999,
+        "lebar": 1,
+        "teks": ""
+      }
+    ],
+    "jumlahMeluap": 8,
+    "hurufTerkecil": [
+      {
+        "px": 11,
+        "contoh": "KONTRIBUSI LST"
+      },
+      {
+        "px": 11.5,
+        "contoh": "PENJELAS PREDIKSI"
+      },
+      {
+        "px": 12,
+        "contoh": "riwayat suhu grid itu sendiri"
+      },
+      {
+        "px": 14,
+        "contoh": "Beranda"
+      }
+    ],
+    "peta": [],
+    "grafik": [
+      {
+        "lebar": 328,
+        "tinggi": 452
+      },
+      {
+        "lebar": 328,
+        "tinggi": 452
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      }
+    ],
+    "tabel": [
+      {
+        "lebar": 328,
+        "tinggi": 317
+      },
+      {
+        "lebar": 294,
+        "tinggi": 317
+      },
+      {
+        "lebar": 0,
+        "tinggi": 0
+      }
+    ],
+    "kartu": {
+      "jumlah": 8,
+      "baris": 5,
+      "lebarMin": 0
+    },
+    "navTerlihat": false,
+    "jumlahNav": 0,
+    "merekTerlihat": false
+  }
+}

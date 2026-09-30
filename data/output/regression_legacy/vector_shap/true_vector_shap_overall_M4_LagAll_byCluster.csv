@@ -1,0 +1,4 @@
+cluster,variable,vector_shap_mean,vector_shap_std,vector_shap_sem,vector_shap_q25,vector_shap_q75,vector_shap_median,vector_shap_pct,n_samples
+All,LST,0.481423,0.434138,0.038373,0.129122,0.697455,0.36938,77.65,128
+All,NDBI,0.110377,0.1052,0.009298,0.04471,0.13965,0.077175,17.8,128
+All,NDVI,0.028196,0.035985,0.003181,0.007373,0.032939,0.018407,4.55,128

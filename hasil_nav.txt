@@ -1,0 +1,778 @@
+﻿=== lebar 390 ===
+{
+ "lebar": 390,
+ "navLink": 0,
+ "navContainer": 0,
+ "header": [
+  {
+   "sel": "header[data-testid=\"stHeader\"]",
+   "testid": "stHeader",
+   "lebar": 390,
+   "tinggi": 60,
+   "display": "flex",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "keyboard_double_arrow_right | Stop | Deploy"
+  }
+ ],
+ "sidebar": [
+  {
+   "sel": "section[data-testid=\"stSidebar\"]",
+   "testid": "stSidebar",
+   "lebar": 0,
+   "tinggi": 0,
+   "display": "none",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "keyboard_double_arrow_lefthomeBerandamapEksplorasi"
+  }
+ ],
+ "sidebarNav": [
+  {
+   "sel": "[data-testid=\"stSidebarNav\"]",
+   "testid": "stSidebarNav",
+   "lebar": 0,
+   "tinggi": 0,
+   "display": "block",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "homeBerandamapEksplorasitrending_upPerubahan Tempo"
+  }
+ ],
+ "kontrolSidebar": [],
+ "tombolHeader": [
+  {
+   "label": "keyboard_double_arrow_right",
+   "lebar": 28
+  },
+  {
+   "label": "Stop",
+   "lebar": 47
+  },
+  {
+   "label": "Deploy",
+   "lebar": 57
+  },
+  {
+   "label": "Main menu",
+   "lebar": 28
+  }
+ ],
+ "semuaTestidHeader": [
+  "stToolbar",
+  "stExpandSidebarButton",
+  "stIconMaterial",
+  "stStatusWidget",
+  "stStatusWidgetRunningIcon",
+  "stStatusWidgetRunningManIcon",
+  "stBaseButton-header",
+  "stToolbarActions",
+  "stAppDeployButton",
+  "stBaseButton-header",
+  "stMainMenu",
+  "stMainMenuButton"
+ ],
+ "tersembunyi": [
+  {
+   "testid": "stSidebar",
+   "display": "none",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarContent",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarHeader",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarCollapseButton",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNav",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavItems",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarUserContent",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stExpandSidebarButton",
+   "display": "flex",
+   "lebar": 28
+  }
+ ]
+}
+
+=== lebar 640 ===
+{
+ "lebar": 640,
+ "navLink": 0,
+ "navContainer": 0,
+ "header": [
+  {
+   "sel": "header[data-testid=\"stHeader\"]",
+   "testid": "stHeader",
+   "lebar": 640,
+   "tinggi": 60,
+   "display": "flex",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "keyboard_double_arrow_right | Stop | Deploy"
+  }
+ ],
+ "sidebar": [
+  {
+   "sel": "section[data-testid=\"stSidebar\"]",
+   "testid": "stSidebar",
+   "lebar": 0,
+   "tinggi": 0,
+   "display": "none",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "keyboard_double_arrow_lefthomeBerandamapEksplorasi"
+  }
+ ],
+ "sidebarNav": [
+  {
+   "sel": "[data-testid=\"stSidebarNav\"]",
+   "testid": "stSidebarNav",
+   "lebar": 0,
+   "tinggi": 0,
+   "display": "block",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "homeBerandamapEksplorasitrending_upPerubahan Tempo"
+  }
+ ],
+ "kontrolSidebar": [],
+ "tombolHeader": [
+  {
+   "label": "keyboard_double_arrow_right",
+   "lebar": 28
+  },
+  {
+   "label": "Stop",
+   "lebar": 47
+  },
+  {
+   "label": "Deploy",
+   "lebar": 57
+  },
+  {
+   "label": "Main menu",
+   "lebar": 28
+  }
+ ],
+ "semuaTestidHeader": [
+  "stToolbar",
+  "stExpandSidebarButton",
+  "stIconMaterial",
+  "stStatusWidget",
+  "stStatusWidgetRunningIcon",
+  "stStatusWidgetRunningManIcon",
+  "stBaseButton-header",
+  "stToolbarActions",
+  "stAppDeployButton",
+  "stBaseButton-header",
+  "stMainMenu",
+  "stMainMenuButton"
+ ],
+ "tersembunyi": [
+  {
+   "testid": "stSidebar",
+   "display": "none",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarContent",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarHeader",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarCollapseButton",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNav",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavItems",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLinkContainer",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarNavLink",
+   "display": "flex",
+   "lebar": 0
+  },
+  {
+   "testid": "stSidebarUserContent",
+   "display": "block",
+   "lebar": 0
+  },
+  {
+   "testid": "stExpandSidebarButton",
+   "display": "flex",
+   "lebar": 28
+  }
+ ]
+}
+
+=== lebar 820 ===
+{
+ "lebar": 820,
+ "navLink": 6,
+ "navContainer": 6,
+ "header": [
+  {
+   "sel": "header[data-testid=\"stHeader\"]",
+   "testid": "stHeader",
+   "lebar": 820,
+   "tinggi": 60,
+   "display": "flex",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "home |  | Beranda |  | map |  | Eksplorasi |  | trending_up |  | Perub"
+  }
+ ],
+ "sidebar": [],
+ "sidebarNav": [],
+ "kontrolSidebar": [],
+ "tombolHeader": [
+  {
+   "label": "2 more",
+   "lebar": 57
+  },
+  {
+   "label": "Stop",
+   "lebar": 47
+  },
+  {
+   "label": "Deploy",
+   "lebar": 57
+  },
+  {
+   "label": "Main menu",
+   "lebar": 28
+  }
+ ],
+ "semuaTestidHeader": [
+  "stToolbar",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavSection",
+  "stMarkdownContainer",
+  "stStatusWidget",
+  "stStatusWidgetRunningIcon",
+  "stStatusWidgetRunningManIcon",
+  "stBaseButton-header",
+  "stToolbarActions",
+  "stAppDeployButton",
+  "stBaseButton-header",
+  "stMainMenu",
+  "stMainMenuButton"
+ ],
+ "tersembunyi": [
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 91
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 91
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 102
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 102
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 166
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 166
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 101
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 101
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 110
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 110
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 146
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 146
+  },
+  {
+   "testid": "stTopNavSection",
+   "display": "flex",
+   "lebar": 57
+  }
+ ]
+}
+
+=== lebar 1000 ===
+{
+ "lebar": 1000,
+ "navLink": 0,
+ "navContainer": 0,
+ "header": [
+  {
+   "sel": "header[data-testid=\"stHeader\"]",
+   "testid": "stHeader",
+   "lebar": 1000,
+   "tinggi": 60,
+   "display": "flex",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": ""
+  }
+ ],
+ "sidebar": [],
+ "sidebarNav": [],
+ "kontrolSidebar": [],
+ "tombolHeader": [],
+ "semuaTestidHeader": [],
+ "tersembunyi": []
+}
+
+=== lebar 1180 ===
+{
+ "lebar": 1180,
+ "navLink": 6,
+ "navContainer": 6,
+ "header": [
+  {
+   "sel": "header[data-testid=\"stHeader\"]",
+   "testid": "stHeader",
+   "lebar": 1180,
+   "tinggi": 60,
+   "display": "flex",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "home |  | Beranda |  | map |  | Eksplorasi |  | trending_up |  | Perub"
+  }
+ ],
+ "sidebar": [],
+ "sidebarNav": [],
+ "kontrolSidebar": [],
+ "tombolHeader": [
+  {
+   "label": "Deploy",
+   "lebar": 57
+  },
+  {
+   "label": "Main menu",
+   "lebar": 28
+  }
+ ],
+ "semuaTestidHeader": [
+  "stToolbar",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stToolbarActions",
+  "stAppDeployButton",
+  "stBaseButton-header",
+  "stMainMenu",
+  "stMainMenuButton"
+ ],
+ "tersembunyi": [
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 91
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 91
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 102
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 102
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 166
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 166
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 101
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 101
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 110
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 110
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 146
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 146
+  }
+ ]
+}
+
+=== lebar 1440 ===
+{
+ "lebar": 1440,
+ "navLink": 6,
+ "navContainer": 6,
+ "header": [
+  {
+   "sel": "header[data-testid=\"stHeader\"]",
+   "testid": "stHeader",
+   "lebar": 1440,
+   "tinggi": 60,
+   "display": "flex",
+   "visibility": "visible",
+   "opacity": "1",
+   "teks": "home |  | Beranda |  | map |  | Eksplorasi |  | trending_up |  | Perub"
+  }
+ ],
+ "sidebar": [],
+ "sidebarNav": [],
+ "kontrolSidebar": [],
+ "tombolHeader": [
+  {
+   "label": "Deploy",
+   "lebar": 57
+  },
+  {
+   "label": "Main menu",
+   "lebar": 28
+  }
+ ],
+ "semuaTestidHeader": [
+  "stToolbar",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stTopNavLinkContainer",
+  "stTopNavLink",
+  "stIconMaterial",
+  "stMarkdownContainer",
+  "stToolbarActions",
+  "stAppDeployButton",
+  "stBaseButton-header",
+  "stMainMenu",
+  "stMainMenuButton"
+ ],
+ "tersembunyi": [
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 91
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 91
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 102
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 102
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 166
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 166
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 101
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 101
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 110
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 110
+  },
+  {
+   "testid": "stTopNavLinkContainer",
+   "display": "flex",
+   "lebar": 146
+  },
+  {
+   "testid": "stTopNavLink",
+   "display": "flex",
+   "lebar": 146
+  }
+ ]
+}
+

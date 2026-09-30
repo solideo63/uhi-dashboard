@@ -1,0 +1,4 @@
+variable,|Φⱼ| mean (True Vector),|Φ⁰ⱼ| mean (Sum SHAP),RMSD (Φⱼ vs Φ⁰ⱼ),RMSD (% of std_prediction)
+LST,0.481423,0.482502,0.006905,0.878
+NDVI,0.028196,0.02788,0.004236,0.539
+NDBI,0.110377,0.111854,0.006079,0.773

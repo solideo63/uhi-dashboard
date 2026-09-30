@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-09-29T06:53:45.297789+00:00",
+  "source": "legacy_pre_harmonization",
+  "selection": "research_model_m4_rf",
+  "selection_label": "M4-RF ditetapkan sebagai model utama penelitian",
+  "best_model": "M4",
+  "best_config": "M4_LagAll_byCluster",
+  "best_algorithm": "RF",
+  "best_label": "M4: Lag LST + NDVI + NDBI (per Cluster)",
+  "n_features": 17,
+  "test_r2": 0.9398104930741664,
+  "test_rmse": 0.20778894200211265,
+  "test_mae": 0.1619804252595079,
+  "n_train": 509,
+  "n_test": 128,
+  "n_complete": 637,
+  "ndvi_ndbi_years": [
+    2009,
+    2012,
+    2015,
+    2018,
+    2021,
+    2024
+  ],
+  "seed": 42,
+  "residual_definition": "prediction_minus_actual",
+  "inputs": {
+    "C:\\Users\\Solideo G. Bangun\\uhi-dashboard\\data\\FINAL_NDVI_NDBI_Grid1km_Jakarta_ALL_YEARS.geojson": "0b4af06f9aae98828901d7e25281740f1c4507ca06c7dd0a73a91b7162238b43",
+    "C:\\Users\\Solideo G. Bangun\\uhi-dashboard\\data\\cluster_spatial_k4.geojson": "f69ef2feb059479ce117a47a45e401c54a18f1fe6ce395816e43062ce91acda2",
+    "C:\\Users\\Solideo G. Bangun\\uhi-dashboard\\data\\LSTPuncakKemarau.geojson": "fd4dd2f8567b3ba5792679a8e1d21243479ea10e81a1f7477a5790ddabc47b09"
+  }
+}
