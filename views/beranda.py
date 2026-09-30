@@ -116,6 +116,10 @@ panas = int(jumlah_kelas.get("Strong", 0) + jumlah_kelas.get("Extreme", 0))
 urban_kuat = uhi[(uhi["zona"] == "urban") & (uhi["klas_uhi"].isin(KELAS_PANAS))]
 rural_kuat = uhi[(uhi["zona"] == "rural") & (uhi["klas_uhi"].isin(KELAS_PANAS))]
 
+# Nilai peak_aoi_mean LSTPuncakKemarau.geojson yang diberikan pengguna;
+# kolom tersebut belum tersedia pada salinan GeoJSON lokal.
+lst_acuan_rural = 36.22579083390426
+
 ui.kartu(
     [
         (
@@ -130,7 +134,7 @@ ui.kartu(
         ),
         (
             "Zona acuan rural",
-            "0,00 °C",
+            f"{lst_acuan_rural:.2f} °C".replace(".", ","),
             f"penyangga 10–25 km, {int(ringkas_uhi.loc['rural', 'grid'])} grid",
         ),
         (
