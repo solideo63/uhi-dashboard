@@ -22,71 +22,44 @@ ui.judul_halaman(
 panel = data.muat_panel()
 matriks = data.matriks_lst()
 
-lst_awal = matriks[data.TAHUN[0]].mean()
-lst_akhir = matriks[data.TAHUN[-1]].mean()
-lst_puncak = matriks.mean().idxmax()
+evaluasi_cluster = data.muat_evaluasi_cluster()
+pada_k4 = evaluasi_cluster[evaluasi_cluster["k"] == 4]
+terbaik_cluster = pada_k4.loc[pada_k4["silhouette"].idxmax()]
+
+evaluasi_model = data.muat_evaluasi_model()
+terbaik_model = evaluasi_model.loc[
+    (evaluasi_model["model"] == "M4") & (evaluasi_model["algoritma"] == "RF")
+].iloc[0]
+shap_m4 = data.muat_shap_ringkas().query("kode == 'M4'").set_index("variabel")["kontribusi"]
 
 ui.kartu(
     [
         ("Grid pengamatan", f"{len(data.muat_grid()):,}".replace(",", "."), "sel 1 × 1 km"),
         ("Periode", f"{len(data.TAHUN)}", f"{data.TAHUN[0]}–{data.TAHUN[-1]}, interval 3 tahun"),
-        ("Rata-rata LST 2024", f"{lst_akhir:.2f} °C", f"{lst_akhir - lst_awal:+.2f} °C terhadap {data.TAHUN[0]}"),
-        ("LST tertinggi", f"{matriks[lst_puncak].mean():.2f} °C", f"tercatat pada periode {lst_puncak}"),
+        (
+            "Clustering terbaik (k = 4)",
+            terbaik_cluster["metode"],
+            f"Silhouette {terbaik_cluster['silhouette']:.4f}<br>"
+            f"Davies–Bouldin {terbaik_cluster['db_index']:.4f}<br>"
+            f"Dunn {terbaik_cluster['dunn_index']:.4f} · WCSS {terbaik_cluster['wcss']:.2f}",
+        ),
+        (
+            "Model peramalan terbaik",
+            f"{terbaik_model['model']} · {terbaik_model['algoritma']}R",
+            "Lag LST + NDVI + NDBI (per Cluster)<br>"
+            f"R² uji {terbaik_model['test_r2']:.4f} · Adjusted R² {terbaik_model['test_adj_r2']:.4f}<br>"
+            f"RMSE {terbaik_model['test_rmse']:.4f} °C · MAE {terbaik_model['test_mae']:.4f} °C<br>"
+            f"MAPE {terbaik_model['test_mape'] * 100:.2f}%",
+        ),
+        (
+            "Penjelas utama SHAP",
+            f"LST {shap_m4.get('LST', 0):.1f}%",
+            f"NDBI {shap_m4.get('NDBI', 0):.1f}% · NDVI {shap_m4.get('NDVI', 0):.1f}%<br>"
+            f"Total variabel lingkungan {shap_m4.get('NDBI', 0) + shap_m4.get('NDVI', 0):.1f}%",
+        ),
         ("Klaster", "4", "tiga metode clustering"),
     ]
 )
-
-kiri, kanan = st.columns([3, 2], gap="large")
-
-with kiri:
-    st.subheader("Perkembangan LST")
-    ringkas = panel.groupby("tahun")[["lst"]].mean().reset_index()
-    st.plotly_chart(
-        viz.garis_tren(
-            ringkas,
-            "tahun",
-            {"LST": "lst"},
-            "Rata-rata LST DKI Jakarta pada puncak kemarau",
-            "LST (°C)",
-        ),
-        width="stretch",
-    )
-
-with kanan:
-    st.subheader("Hasil utama")
-
-    evaluasi_cluster = data.muat_evaluasi_cluster()
-    pada_k4 = evaluasi_cluster[evaluasi_cluster["k"] == 4]
-    terbaik_cluster = pada_k4.loc[pada_k4["silhouette"].idxmax()]
-
-    evaluasi_model = data.muat_evaluasi_model()
-    terbaik_model = evaluasi_model.loc[(evaluasi_model["model"] == "M4") & (evaluasi_model["algoritma"] == "RF")].iloc[0]
-
-    shap_m4 = data.muat_shap_ringkas().query("kode == 'M4'").set_index("variabel")["kontribusi"]
-
-    st.markdown(
-        f"""
-**Metode clustering terbaik pada k = 4**
-
-`{terbaik_cluster['metode']}` — Silhouette **{terbaik_cluster['silhouette']:.4f}**,
-Davies–Bouldin **{terbaik_cluster['db_index']:.4f}**, Dunn **{terbaik_cluster['dunn_index']:.4f}**,
-WCSS **{terbaik_cluster['wcss']:.2f}**.
-
-**Model peramalan terbaik**
-
-`{terbaik_model['konfigurasi']}` dengan algoritma **{terbaik_model['algoritma']}** —
-R² uji **{terbaik_model['test_r2']:.4f}**, Adjusted R² **{terbaik_model['test_adj_r2']:.4f}**,
-RMSE **{terbaik_model['test_rmse']:.4f} °C**, MAE **{terbaik_model['test_mae']:.4f} °C**,
-MAPE **{terbaik_model['test_mape'] * 100:.2f}%**.
-
-**Penjelas utama prediksi menurut SHAP**
-
-Riwayat LST menyumbang **{shap_m4.get('LST', 0):.1f}%** penjelasan, NDBI
-**{shap_m4.get('NDBI', 0):.1f}%**, dan NDVI **{shap_m4.get('NDVI', 0):.1f}%**, sehingga
-variabel lingkungan secara keseluruhan mengambil
-**{shap_m4.get('NDBI', 0) + shap_m4.get('NDVI', 0):.1f}%**.
-"""
-    )
 
 st.divider()
 

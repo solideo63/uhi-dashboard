@@ -1,7 +1,6 @@
 """Elemen antarmuka yang dipakai berulang di seluruh halaman dashboard.
 
-Navigasi berada di atas halaman, sehingga bilah sisi dikosongkan dan
-disembunyikan agar peta serta grafik memakai seluruh lebar layar.
+Navigasi berada di atas pada desktop dan di bilah samping pada layar HP.
 """
 
 from __future__ import annotations
@@ -24,9 +23,12 @@ _GAYA = f"""
     --aksen: {viz.WARNA_CLUSTER[1]};
   }}
 
-  /* Bilah sisi dikosongkan karena navigasi sudah pindah ke atas. */
-  section[data-testid="stSidebar"], div[data-testid="stSidebarCollapsedControl"] {{
-    display: none !important;
+  /* Streamlit memindahkan navigasi atas ke sidebar pada layar kecil.
+     Sembunyikan sidebar hanya pada desktop agar menu HP tetap bisa dibuka. */
+  @media (min-width: 769px) {{
+    section[data-testid="stSidebar"], div[data-testid="stSidebarCollapsedControl"] {{
+      display: none !important;
+    }}
   }}
 
   .stApp {{ background: var(--bidang); }}
