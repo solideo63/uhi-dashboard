@@ -68,6 +68,53 @@ def geometri_jakarta():
     return grid.to_crs('EPSG:4326')
 
 
+def lengkapi_prediksi_peta(predictions):
+    """Prediksi tambahan dari indeks interpolasi; bukan sampel evaluasi."""
+    tambahan = _prediksi_indeks_interpolasi(
+        (OUTPUT / 'best_model.joblib').stat().st_mtime_ns
+    )
+    tambahan = tambahan[~tambahan['grid_id'].isin(predictions['grid_id'])]
+    return pd.concat([predictions, tambahan], ignore_index=True)
+
+
+@st.cache_data(show_spinner=False)
+def _prediksi_indeks_interpolasi(signature):
+    import joblib
+
+    artifact = joblib.load(OUTPUT / 'best_model.joblib')
+    panel = data.muat_panel()
+    lst = panel.pivot(index='grid_id', columns='tahun', values='lst')
+    ndvi, ndbi = data.matriks_indeks()
+    fitur = pd.concat([
+        lst.add_prefix('lst_'), ndvi.add_prefix('ndvi'), ndbi.add_prefix('ndbi')
+    ], axis=1)
+    fitur['cluster'] = data.muat_cluster().set_index('grid_id')['k-means_cluster']
+    # Hanya grid yang membutuhkan pengisian indeks dan memiliki riwayat LST.
+    kosong = panel.loc[panel[['ndvi', 'ndbi']].isna().any(axis=1), 'grid_id']
+    fitur = fitur.loc[fitur.index.isin(kosong)].dropna(
+        subset=[*artifact['features'], 'lst_2024', 'cluster']
+    )
+    hasil = pd.DataFrame(index=fitur.index)
+    hasil['aktual'] = fitur['lst_2024']
+    hasil['cluster'] = fitur['cluster']
+    hasil['prediksi'] = np.nan
+    for label, estimator in artifact['models'].items():
+        mask = fitur['cluster'].eq(int(label))
+        if mask.any():
+            hasil.loc[mask, 'prediksi'] = estimator.predict(
+                fitur.loc[mask, artifact['features']].to_numpy()
+            )
+    if not np.isfinite(hasil[['aktual', 'prediksi']].to_numpy()).all():
+        raise ValueError('Prediksi grid dengan indeks interpolasi tidak lengkap.')
+    hasil['selisih'] = hasil['prediksi'] - hasil['aktual']
+    hasil['split'] = 'interpolasi'
+    hasil['model'] = 'M4'
+    hasil['algoritma'] = 'RF'
+    hasil = hasil.reset_index()
+    hasil['grid_id'] = hasil['grid_id'].astype(str)
+    return hasil
+
+
 def peta_prediksi(predictions, hanya_uji=True):
     selected = predictions[predictions['split'].eq('test')] if hanya_uji else predictions
     grid = geometri_jakarta()

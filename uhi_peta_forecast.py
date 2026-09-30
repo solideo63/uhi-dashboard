@@ -14,7 +14,10 @@ def peta_forecasting(gdf, kolom, rentang, batas=None):
     layer = gdf[['grid_id', 'wilayah', 'aktual', 'prediksi', 'selisih', 'split', 'geometry']].copy()
     for field in ('aktual', 'prediksi', 'selisih'):
         layer[f'{field}_teks'] = layer[field].map(lambda x: 'Tidak ditampilkan' if pd.isna(x) else f'{x:+.3f} °C' if field == 'selisih' else f'{x:.3f} °C')
-    layer['kelompok'] = layer['split'].map({'train': 'Data latih', 'test': 'Data uji'}).fillna('Di luar cakupan tampilan')
+    layer['kelompok'] = layer['split'].map({
+        'train': 'Data latih', 'test': 'Data uji',
+        'interpolasi': 'Prediksi tambahan (NDVI/NDBI interpolasi)',
+    }).fillna('Di luar cakupan / tanpa riwayat LST')
 
     def gaya(feature):
         value = feature['properties'][kolom]

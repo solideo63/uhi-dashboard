@@ -36,19 +36,20 @@ tab_prediksi, tab_resmi, tab_proyeksi = st.tabs(["Model terbaik & peta", "Evalua
 
 with tab_prediksi:
     st.caption(
-        f"{info['best_label']} — {nama_algoritma}. Prediksi berasal dari hasil notebook "
-        "yang tersimpan; tidak ada pelatihan ulang saat peta dibuka."
+        f"{info['best_label']} — {nama_algoritma}. Prediksi utama berasal dari hasil notebook. "
+        "Grid dengan indeks interpolasi diprediksi memakai model tersimpan, tanpa pelatihan ulang."
     )
-    cakupan = st.radio("Cakupan peta", ["Data uji", "Seluruh grid (latih dan uji)"],
-                       horizontal=True, key="forecast-cakupan")
+    prediksi_peta = forecast.lengkapi_prediksi_peta(seluruh_prediksi)
+    cakupan = st.radio("Cakupan peta", ["Data uji", "Seluruh grid tersedia"],
+                       index=1, horizontal=True, key="forecast-cakupan")
     hanya_uji = cakupan == "Data uji"
-    pred = pred_uji if hanya_uji else seluruh_prediksi
+    pred = pred_uji if hanya_uji else prediksi_peta
     if not hanya_uji:
-        st.caption("Tampilan ini mencakup prediksi pada data latih. Kartu metrik di atas tetap dihitung hanya dari data uji.")
+        st.caption("Mencakup data latih, data uji, dan prediksi tambahan dengan NDVI/NDBI yang diinterpolasi antartahun. Kartu metrik tetap dihitung hanya dari data uji.")
     pilihan = st.radio("Nilai pada peta", ["Prediksi − aktual", "LST prediksi 2024", "LST aktual 2024"],
                         horizontal=True, key="forecast-peta")
     kolom = {"Prediksi − aktual": "selisih", "LST prediksi 2024": "prediksi", "LST aktual 2024": "aktual"}[pilihan]
-    peta_data = forecast.peta_prediksi(seluruh_prediksi, hanya_uji=hanya_uji)
+    peta_data = forecast.peta_prediksi(prediksi_peta, hanya_uji=hanya_uji)
     if kolom == "selisih":
         limit = max(float(pred["selisih"].abs().max()), .01)
         rentang = (-limit, limit)

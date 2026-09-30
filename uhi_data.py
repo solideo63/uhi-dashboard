@@ -88,7 +88,7 @@ def muat_indeks() -> pd.DataFrame:
     asal komposit dan ``n_citra`` menyebut banyaknya citra yang dipakai untuk
     menyusunnya; keduanya dipertahankan karena menentukan seberapa kuat sebuah
     nilai dapat dipercaya. Nilai yang kosong dibiarkan apa adanya; pengisiannya
-    hanya dilakukan di :func:`matriks_indeks` untuk keperluan pemodelan.
+    dilakukan di :func:`matriks_indeks` untuk pemodelan dan peta.
     """
     gdf = gpd.read_file(BERKAS_INDEKS)
     df = pd.DataFrame(gdf.drop(columns="geometry"))
@@ -131,8 +131,11 @@ def muat_panel() -> pd.DataFrame:
 
 @st.cache_data
 def muat_peta_panel() -> gpd.GeoDataFrame:
-    """Panel data yang sudah disatukan dengan geometri dan nama wilayah grid."""
-    gabung = muat_grid().merge(muat_panel(), on="grid_id", how="right")
+    """Panel peta dengan NDVI/NDBI diisi memakai interpolasi pemodelan."""
+    panel = muat_panel().copy().set_index(["grid_id", "tahun"])
+    for kolom, matriks in zip(("ndvi", "ndbi"), matriks_indeks()):
+        panel[kolom] = panel[kolom].fillna(matriks.stack())
+    gabung = muat_grid().merge(panel.reset_index(), on="grid_id", how="right")
     gabung = gabung.merge(wilayah_grid(), on="grid_id", how="left")
     return gpd.GeoDataFrame(gabung, geometry="geometry", crs="EPSG:4326")
 
@@ -153,8 +156,8 @@ def matriks_indeks() -> tuple[pd.DataFrame, pd.DataFrame]:
     """Matriks NDVI dan NDBI per grid per tahun.
 
     Sejumlah kecil sel tidak memiliki citra bebas awan pada periode tertentu;
-    nilainya diisi dengan interpolasi linear antartahun. Pengisian ini hanya
-    dipakai untuk pemodelan, bukan untuk statistik deskriptif.
+    nilainya diisi dengan interpolasi linear antartahun. Hasilnya dipakai
+    untuk pemodelan dan peta, termasuk statistik eksplorasi pada peta.
     """
     indeks = muat_indeks()
     ndvi = indeks.pivot(index="grid_id", columns="tahun", values="ndvi")

@@ -20,7 +20,6 @@ ui.judul_halaman(
 )
 
 panel = data.muat_panel()
-matriks = data.matriks_lst()
 
 evaluasi_cluster = data.muat_evaluasi_cluster()
 pada_k4 = evaluasi_cluster[evaluasi_cluster["k"] == 4]
@@ -87,7 +86,6 @@ jumlah_kelas = uhi["klas_uhi"].value_counts()
 KELAS_PANAS = ["Strong", "Extreme"]
 panas = int(jumlah_kelas.get("Strong", 0) + jumlah_kelas.get("Extreme", 0))
 urban_kuat = uhi[(uhi["zona"] == "urban") & (uhi["klas_uhi"].isin(KELAS_PANAS))]
-rural_kuat = uhi[(uhi["zona"] == "rural") & (uhi["klas_uhi"].isin(KELAS_PANAS))]
 
 # Nilai peak_aoi_mean LSTPuncakKemarau.geojson yang diberikan pengguna;
 # kolom tersebut belum tersedia pada salinan GeoJSON lokal.
@@ -178,17 +176,6 @@ ui.keterangan(
     f"Sebanyak <b>{len(urban_kuat)} dari {int(ringkas_uhi.loc['urban', 'grid'])} grid</b> "
     "di dalam wilayah administrasi Jakarta tergolong Strong atau Extreme.",
 )
-ui.keterangan(
-    "Dua hal perlu diperhatikan saat membacanya. <b>Pertama</b>, zona ditentukan murni "
-    "oleh jarak dari batas administrasi, bukan oleh tutupan lahannya, sehingga "
-    f"<b>{len(rural_kuat)} grid</b> di zona rural tetap tergolong Strong atau Extreme — umumnya kawasan terbangun "
-    "di luar Jakarta seperti Tangerang, Bekasi, dan Depok. "
-    "<b>Kedua</b>, komposit citra untuk analisis ini diambil pada Oktober 2024, berbeda "
-    "dari komposit Juli–Agustus yang dipakai halaman lain, sehingga nilai LST-nya tidak "
-    "dapat dibandingkan langsung dengan angka pada halaman Eksplorasi.",
-    samping=True,
-)
-
 st.divider()
 
 st.subheader("Isi dashboard")
@@ -220,21 +207,6 @@ with bawah_kiri:
         }
     )
     st.dataframe(cakupan, hide_index=True, width="stretch")
-
-    kosong_indeks = int(panel["ndvi"].isna().sum())
-    ui.keterangan(
-        "Tiga hal perlu diperhatikan saat membaca seluruh halaman. "
-        f"<b>Pertama</b>, {len(data.muat_grid()) - len(matriks)} grid tidak memiliki nilai LST "
-        "sama sekali sehingga tidak diikutkan dalam clustering maupun pemodelan; jumlah grid "
-        f"yang dianalisis adalah {len(matriks)} dari {len(data.muat_grid())}. "
-        f"<b>Kedua</b>, {kosong_indeks} sel tidak memperoleh citra bebas awan untuk NDVI dan NDBI; "
-        "peta menggambarnya abu-abu, sedangkan pemodelan mengisinya dengan interpolasi "
-        "antartahun. "
-        "<b>Ketiga</b>, satelit sumber NDVI dan NDBI berganti antarperiode dari Landsat 7 ke "
-        "Landsat 8 lalu Sentinel-2, sehingga lompatan nilai yang bertepatan dengan pergantian "
-        "itu perlu diperiksa lebih dulu terhadap kemungkinan pengaruh perbedaan sensor.",
-        samping=True,
-    )
 
 with bawah_kanan:
     st.subheader("Sumber data")
